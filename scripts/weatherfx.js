@@ -125,13 +125,11 @@ Hooks.on("getSceneControlButtons", (controls, b, c) => {
 function toggleWeatherControl(){
     let factor = toggleApp;
     game.settings.set("weatherfx", "toggleApp", factor * -1)
-    // factor = 1? -1 : 1;
     const defaultPosition = { top: 100*factor, left: 100*factor };
     const element = document.getElementById('weather-control-container');
     if (element) {
       element.style.top = defaultPosition.top + 'px';
       element.style.left = defaultPosition.left + 'px';
-    //   this.settings.setWindowPosition({top: element.offsetTop, left: element.offsetLeft});
       element.style.bottom = null;
     }
 
